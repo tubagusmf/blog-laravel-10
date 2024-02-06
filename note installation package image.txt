@@ -1,0 +1,18 @@
+
+@mubateknologi
+2 weeks ago
+Ada conflict antara file-manager dgn intervention image
+
+Sebelum itu hapus dulu versi 3 intervention image
+
+Di file composer.json hapus bagian intervention/image
+
+Kemudian lakukan composer update 
+
+Untuk intervention image install versi 2 dgn perintah berikut:
+
+composer require intervention/image:2.*
+
+Untuk file-manager install seperti biasa dgn perintah berikut:
+
+composer require unisharp/file-manager
