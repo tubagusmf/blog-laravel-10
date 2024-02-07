@@ -1,0 +1,12 @@
+installasi laravel ui boostrap
+
+composer require laravel/ui
+php artisan ui bootstrap --auth
+
+jika berhasil maka jalankan perintah :
+npm install
+npm run dev
+
+jika gagal installasi npm, maka uninstall dulu node js dan intall kembali node js dengan versi terbaru. setelah itu jalankan kembali:
+npm install
+npm run dev
