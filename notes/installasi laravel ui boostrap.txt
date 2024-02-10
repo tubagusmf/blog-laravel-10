@@ -9,4 +9,4 @@ npm run dev
 
 jika gagal installasi npm, maka uninstall dulu node js dan intall kembali node js dengan versi terbaru. setelah itu jalankan kembali:
 npm install
-npm run dev
+npm run dev //untuk menjalankan tampilan ui login

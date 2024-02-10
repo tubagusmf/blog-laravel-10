@@ -66,9 +66,12 @@
         </table>
     </div>
 
+    @include('backend.user.create-modal')
+    @include('backend.user.update-modal')
+    @include('backend.user.delete-modal')
 
   </main>
-</div>
-</div>
+{{-- </div>
+</div> --}}
     
 @endsection
