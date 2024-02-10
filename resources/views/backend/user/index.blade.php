@@ -13,7 +13,10 @@
     </div>
 
     <div class="mt-3">
-        <button class="btn btn-primary btn-sm mb-3" data-bs-toggle="modal" data-bs-target="#modalCreate">Register</button>
+
+        @if (auth()->user()->role == 1)
+            <button class="btn btn-primary btn-sm mb-3" data-bs-toggle="modal" data-bs-target="#modalCreate">Register</button> 
+        @endif    
 
         @if ($errors->any())
             <div class="mb-3">
@@ -57,7 +60,11 @@
                     <td>
                         <div class="text-center">
                             <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modalUpdate{{ $item->id }}">Edit</button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalDelete{{ $item->id }}">Delete</button>
+                            @if (auth()->user()->role == 1) 
+                                @if ($item->id != auth()->user()->id) 
+                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalDelete{{ $item->id }}">Delete</button>
+                                @endif                               
+                            @endif
                         </div>
                     </td>
                 </tr>                   

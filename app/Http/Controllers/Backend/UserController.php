@@ -12,8 +12,16 @@ class UserController extends Controller
 {
     public function index()
     {
+
+        if (auth()->user()->role == 1) {
+            $users = User::get(); //jika login role 1(admin) maka data user tampil semua
+        } else {
+            $users = User::whereId(auth()->user()->id)->get();
+        }
+        
+
         return view('backend.user.index', [
-            'users' => User::get()
+            'users' => $users
         ]);
     }
 
