@@ -23,6 +23,7 @@ use App\Http\Controllers\Backend\DashboardController;
 // });
 
 Route::get('/', [HomeController::class, 'index']);
+Route::post('/articles/search', [HomeController::class, 'index']);
 
 Route::middleware('auth')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index']);
