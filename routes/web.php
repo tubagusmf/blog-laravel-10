@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Backend\ArticleController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Frontend\ArticleController as FrontendArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,13 @@ use App\Http\Controllers\Backend\DashboardController;
 //     return view('welcome');
 // });
 
+// Frontend
 Route::get('/', [HomeController::class, 'index']);
 Route::post('/articles/search', [HomeController::class, 'index']);
 
+Route::get('/p/{slug}', [FrontendArticleController::class, 'show']);
+
+// Backend
 Route::middleware('auth')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
