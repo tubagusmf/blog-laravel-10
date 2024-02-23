@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\ArticleController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\ArticleController as FrontendArticleController;
+use App\Http\Controllers\frontend\CategoryController as FrontendCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +26,12 @@ use App\Http\Controllers\Frontend\ArticleController as FrontendArticleController
 
 // Frontend
 Route::get('/', [HomeController::class, 'index']);
-Route::post('/articles/search', [HomeController::class, 'index']);
+Route::get('/about', [HomeController::class, 'about']);
 
 Route::get('/p/{slug}', [FrontendArticleController::class, 'show']);
+Route::get('/articles', [FrontendArticleController::class, 'index']);
+Route::post('/articles/search', [FrontendArticleController::class, 'index'])->name('search');
+Route::get('category/{slug}', [FrontendCategoryController::class, 'index']);
 
 // Backend
 Route::middleware('auth')->group(function() {

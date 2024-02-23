@@ -1,5 +1,7 @@
 @extends('frontend.layout.template')
 
+@section('title', 'Home - Tebe Blog')
+
 @section('content')
     
 <!-- Page content-->

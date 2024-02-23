@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        {{-- <meta name="description" content="" /> --}}
+        <meta name="author" content="Tubagus M F" />
         @stack('meta-seo')
-        <title>Blog Home</title>
+        <title>@yield('title')</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="{{ asset('frontend/img/favicon.ico') }}" />
         <!-- Core theme CSS (includes Bootstrap)-->
