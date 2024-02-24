@@ -26,8 +26,8 @@ class ArticleController extends Controller
         return view('frontend.article.index', [
             'article'           => $articles,
             'keyword'           => $keyword,  
-            'categories'        => Category::latest()->get(),
-            'category_navbar'   => Category::latest()->take(3)->get(),
+            // 'categories'        => Category::latest()->get(),
+            // 'category_navbar'   => Category::latest()->take(3)->get(), ->sudah dipindahkan ke service provide side-widget
         ]);
     }
 
@@ -38,8 +38,7 @@ class ArticleController extends Controller
 
         return view('frontend.article.show', [
             'article'           => $article,
-            'categories'        => Category::latest()->get(),
-            'category_navbar'   => Category::latest()->take(3)->get(),
+            // 'category_navbar'   => Category::latest()->take(3)->get(), ->sudah dipindahkan ke service provide side-widget
         ]);
     }
 }

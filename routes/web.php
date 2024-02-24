@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Backend\ArticleController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\ArticleController as FrontendArticleController;
 use App\Http\Controllers\frontend\CategoryController as FrontendCategoryController;
@@ -27,6 +28,7 @@ use App\Http\Controllers\frontend\CategoryController as FrontendCategoryControll
 // Frontend
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
+Route::get('/contact', [ContactController::class, 'index']);
 
 Route::get('/p/{slug}', [FrontendArticleController::class, 'show']);
 Route::get('/articles', [FrontendArticleController::class, 'index']);

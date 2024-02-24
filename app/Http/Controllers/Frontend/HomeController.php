@@ -26,17 +26,15 @@ class HomeController extends Controller
 
         return view('frontend.home.index', [
             'latest_post'       => Article::latest()->first(),
-            'articles'          => Article::with('Category')->where('status', 1)->latest()->paginate(3),
-            'categories'        => Category::latest()->take(3)->get(),
-            'category_navbar'   => Category::latest()->take(3)->get(),
+            'articles'          => Article::with('Category')->where('status', 1)->latest()->paginate(3),    
+            // 'category_navbar'   => Category::latest()->take(3)->get(), ->sudah dipindahkan ke service provide side-widget
         ]);
     }
 
     public function about()
     {
         return view('frontend.home.about', [
-            'categories'        => Category::latest()->get(),
-            'category_navbar'   => Category::latest()->take(3)->get(),
+            // 'category_navbar'   => Category::latest()->take(3)->get(), ->sudah dipindahkan ke service provide side-widget
         ]);
     }
 }
