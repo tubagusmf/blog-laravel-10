@@ -14,6 +14,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('frontend/css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet" />
+        {{-- animate aos --}}
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         @stack('css')
     </head>
     <body>
@@ -38,6 +40,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('frontend/js/scripts.js') }}"></script>
+        {{-- animate aos --}}
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         @stack('js')
     </body>
 </html>

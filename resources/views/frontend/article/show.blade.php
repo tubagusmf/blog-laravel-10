@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <!-- Blog entries-->
-        <div class="col-lg-8">
+        <div class="col-lg-8" data-aos="fade-up">
             <!-- Featured blog post-->
             <div class="card shadow-sm mb-4">
                 <a href="{{ url('p/'.$article->slug) }}">
