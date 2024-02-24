@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -31,6 +32,12 @@ class SideWidgetProvider extends ServiceProvider
             $category = Category::latest()->take(3)->get();
 
             $view->with('category_navbar', $category);
+        });
+
+        View::composer('frontend.layout.side-widget', function ($view) {
+            $posts = Article::orderBy('views', 'desc')->take(3)->get();
+
+            $view->with('popular_post', $posts);
         });
     }
 }
