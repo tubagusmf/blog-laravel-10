@@ -34,6 +34,7 @@ Route::get('/p/{slug}', [FrontendArticleController::class, 'show']);
 Route::get('/articles', [FrontendArticleController::class, 'index']);
 Route::post('/articles/search', [FrontendArticleController::class, 'index'])->name('search');
 Route::get('category/{slug}', [FrontendCategoryController::class, 'index']);
+Route::get('all-category', [FrontendCategoryController::class, 'allCategory']);
 
 // Backend
 Route::middleware('auth')->group(function() {

@@ -17,7 +17,7 @@
                         @endforeach
                       
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">More Categories</a></li>
+                      <li><a class="dropdown-item" href="{{ url('all-category') }}">More Categories</a></li>
                     </ul>
                   </li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>

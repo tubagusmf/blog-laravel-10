@@ -23,6 +23,12 @@
                     </div>
                     <h1 class="card-title">{{ $article->title }}</h1>
                     <p class="card-text">{!! $article->desc !!}</p>
+
+                    <div class="mt-4 mb-4">
+                        <p style="font-size: 20px">Share this</p>
+                        <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" target="_blank" class="btn btn-primary btn-sm"><i class="fab fa-facebook"></i></a>
+                        <a href="https://api.whatsapp.com/send?text={{ url()->current() }}" target="_blank" class="btn btn-success btn-sm"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
