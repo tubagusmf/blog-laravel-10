@@ -17,12 +17,18 @@
         @if (auth()->user()->role == 1)            
         <li class="nav-item">
           <a class="nav-link" href="{{ url('categories') }}">
-            <span data-feather="shopping-cart"></span>
+            <span data-feather="folder"></span>
             Categories
           </a>
         </li>
         @endif
         
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('config') }}">
+            <span data-feather="settings"></span>
+            Config
+          </a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url('users') }}">
             <span data-feather="users"></span>
@@ -34,7 +40,7 @@
             @csrf
           </form>
           <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-            <span data-feather="bar-chart-2"></span>
+            <span data-feather="log-out"></span>
             Logout
           </a>
         </li>

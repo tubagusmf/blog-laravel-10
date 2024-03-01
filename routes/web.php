@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Backend\ConfigController;
 use App\Http\Controllers\Backend\ArticleController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\ContactController;
@@ -47,6 +48,10 @@ Route::middleware('auth')->group(function() {
     ])->middleware('UserAccess:1');
 
     Route::resource('/users', UserController::class);
+
+    Route::resource('/config', ConfigController::class)->only([
+        'index', 'update'
+    ]);
 
     Route::group(['prefix' => 'laravel-filemanager'], function () {
         \UniSharp\LaravelFilemanager\Lfm::routes();
