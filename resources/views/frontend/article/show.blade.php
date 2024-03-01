@@ -15,7 +15,7 @@
                     <img class="card-img-top single-img" src="{{ asset('storage/backend/'.$article->img) }}" alt="{{ $article->title }}" /></a>
                 <div class="card-body">
                     <div class="small text-muted">
-                        <span class="ml-2">{{ $article->created_at->format('d-m-Y') }}</span>
+                        <span class="ml-2">{{ $article->created_at->format('d-m-Y') }} | {{ $article->User->name }} | </span>
                         <span class="ml-2">
                             <a href="{{ url('category/'.$article->Category->slug) }}"> {{ $article->Category->name }}</a>
                         </span>
