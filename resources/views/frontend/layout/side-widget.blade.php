@@ -27,7 +27,11 @@
     <!-- Side widget-->
     <div class="card shadow-sm mb-4">
         <div class="card-header">Side Widget</div>
-        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+        <div class="card-body">
+            <a href="{{ $config['ads_widget'] }}" target="_blank">
+                <img src="{{ $config['ads_widget'] }}" alt="ads_widget" class="img-fluid" width="70%">
+            </a>
+        </div>
     </div>
 
     <!-- Related post-->

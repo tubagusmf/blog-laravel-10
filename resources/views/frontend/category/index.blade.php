@@ -22,7 +22,7 @@
     <div class="row">
         <!-- Blog entries-->
         @forelse ($articles as $item)
-            <div class="col-4" data-aos="flip-up">
+            <div class="col-lg-4" data-aos="flip-up">
                 <div class="card mb-4">
                     <a href="{{ url('p/'.$item->slug) }}"><img class="card-img-top post-img" src="{{ asset('storage/backend/'.$item->img) }}" height="250px" alt="..." /></a>
                     <div class="card-body card-height">

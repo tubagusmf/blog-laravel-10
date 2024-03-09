@@ -22,8 +22,11 @@
                     </p>
 
                     <ul>
-                        <li><a href="https://youtube.com">Phone : +628899210291</a></li>
-                        <li><a href="https://youtube.com">Email : tubagus@gmail.com</a></li>
+                        <li>Email : {{ $config['email'] }}</li>
+                        <li>Phone : {{ $config['phone'] }}</li>
+                        <li><a href="https://youtube.com/{{ $config['youtube'] }}">Youtube</a></li>
+                        <li><a href="https://instagram.com/{{ $config['instagram'] }}">Instagram</a></li>
+                        <li><a href="https://facebook.com/{{ $config['facebook'] }}">Facebook</a></li>
                     </ul>
                 </div>
             </div>
