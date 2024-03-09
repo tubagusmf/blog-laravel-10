@@ -1,5 +1,17 @@
 @extends('frontend.layout.template')
 
+@push('meta-seo')
+    <meta name="author" content="{{ $article->User->name }}" />
+    <meta name="description" value="{{ Str::limit(strip_tags($article->desc), 150, '...') }}">
+    <meta name="keyword" value="{{ $article->title . ' - Tebe Blog' }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ $article->title . ' - Tebe Blog' }}">
+    <meta property="og:url" value="{{ url()->current() }}">
+    <meta property="og:site_name" content="SITE NAME">
+    <meta property="og:description" value="Article Tebe Blog, Seputar web yang memberika informasi menarik dan terakurat, serta sebagai media informasi yang memiliki banyak hiburan.">
+    <meta property="og:image" value="{{ asset('storage/backend/'.$article->img) }}">
+@endpush
+
 @section('title', $article->title . ' - Tebe Blog')
 
 @section('content')

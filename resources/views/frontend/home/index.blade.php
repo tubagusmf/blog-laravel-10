@@ -1,5 +1,15 @@
 @extends('frontend.layout.template')
 
+@push('meta-seo')
+    <meta name="description" value="Tebe Blog, Seputar web yang memberika informasi menarik dan terakurat.">
+    <meta name="keyword" value="Tebe Blog, tebe blog teknologi, tebe games, tebe sport">
+    <meta property="og:title" value="Home - Tebe Blog">
+    <meta property="og:url" value="{{ url()->current() }}">
+    <meta property="og:site_name" value="SITE NAME">
+    <meta property="og:description" value="Tebe Blog, Seputar web yang memberika informasi menarik dan terakurat, serta sebagai media informasi yang memiliki banyak hiburan.">
+    <meta property="og:image" value="{{ asset('storage/backend/'.$latest_post->img) }}">
+@endpush
+
 @section('title', 'Home - Tebe Blog')
 
 @section('content')

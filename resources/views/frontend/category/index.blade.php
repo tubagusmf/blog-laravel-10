@@ -1,5 +1,15 @@
 @extends('frontend.layout.template')
 
+@push('meta-seo')
+    <meta name="description" value="Category Tebe Blog, Seputar web yang memberika informasi menarik dan terakurat.">
+    <meta name="keyword" value="Tebe Blog, tebe blog teknologi, tebe games, tebe sport, kategori tebe blog">
+    <meta property="og:title" content="Category {{ $category . " - Tebe Blog"}} ">
+    <meta property="og:url" value="{{ url()->current() }}">
+    <meta property="og:site_name" content="SITE NAME">
+    <meta property="og:description" value="Category Tebe Blog, Seputar web yang memberika informasi menarik dan terakurat, serta sebagai media informasi yang memiliki banyak hiburan.">
+    <meta property="og:image" value="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Logo_PT_Kereta_Api_Indonesia_%28Persero%29_2020.svg/2560px-Logo_PT_Kereta_Api_Indonesia_%28Persero%29_2020.svg.png">
+@endpush
+
 @section('title', 'Category ' . $category . ' - Tebe Blog')
 
 @section('content')
