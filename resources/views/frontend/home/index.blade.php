@@ -35,7 +35,7 @@
                 @foreach ($articles as $item)
                 <div class="col-lg-6" data-aos="fade-up">
                     <!-- Blog post-->
-                    <div class="card mb-4">
+                    <div class="card mb-4 pb-4">
                         <a href="{{ url('p/'.$item->slug) }}"><img class="card-img-top post-img" src="{{ asset('storage/backend/'.$item->img) }}" height="250px" alt="..." /></a>
                         <div class="card-body card-height mb-4">
                             <div class="small text-muted">{{ $item->created_at->format('d-m-Y') }} | {{ $item->User->name }} | 

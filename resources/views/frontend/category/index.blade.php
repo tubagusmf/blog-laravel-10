@@ -40,7 +40,7 @@
                         <a href="{{ url('category/'.$item->Category->slug) }}">{{ $item->Category->name }}</a>
                         </div>
                         <h2 class="card-title h4">{{ $item->title }}</h2>
-                        <p class="card-text">{{ Str::limit(strip_tags($item->desc), 100, '...') }}</p>
+                        <p class="card-text">{!! Str::limit(strip_tags($item->desc), 100, '...') !!}</p>
                         <a class="btn btn-primary" href="{{ url('p/'.$item->slug) }}">Read more →</a>
                     </div>
                 </div>

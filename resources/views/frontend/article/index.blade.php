@@ -36,14 +36,14 @@
         <!-- Blog entries-->
         @forelse ($article as $item)
             <div class="col-lg-4">
-                <div class="card mb-4" data-aos="flip-up">
+                <div class="card mb-4 pb-5" data-aos="flip-up">
                     <a href="{{ url('p/'.$item->slug) }}"><img class="card-img-top post-img" src="{{ asset('storage/backend/'.$item->img) }}" height="250px" alt="..." /></a>
                     <div class="card-body card-height">
                         <div class="small text-muted">{{ $item->created_at->format('d-m-Y') }} | {{ $item->User->name }} | 
                         <a href="{{ url('category/'.$item->Category->slug) }}">{{ $item->Category->name }}</a>
                         </div>
                         <h2 class="card-title h4">{{ $item->title }}</h2>
-                        <p class="card-text">{{ Str::limit(strip_tags($item->desc), 100, '...') }}</p>
+                        <p class="card-text">{!! Str::limit(strip_tags($item->desc), 100, '...') !!}</p>
                         <a class="btn btn-primary" href="{{ url('p/'.$item->slug) }}">Read more →</a>
                     </div>
                 </div>
